@@ -122,7 +122,7 @@ var AppComponent = /** @class */ (function () {
     };
     ;
     AppComponent.prototype.save = function () {
-        alert("Do you want to save an array?");
+        confirm("Do you want to save an array?");
         this.localNumber = "";
         for (var _i = 0; _i < this.numArray.length; _i++) {
             if (_i == 0) {
@@ -141,7 +141,7 @@ var AppComponent = /** @class */ (function () {
     // в какой загрузать this.numArray
     // например из правой переменной в правую колонку
     AppComponent.prototype.load = function () {
-        alert("Do you want to load an array?");
+        confirm("Do you want to load an array?");
         this.inputNumber = localStorage.getItem('carNumbersParking1');
         console.log(this.inputNumber);
         var myNumArray = this.inputNumber.split(",");
@@ -155,7 +155,7 @@ var AppComponent = /** @class */ (function () {
     };
     ;
     AppComponent.prototype.reset = function () {
-        alert("Do you want to reset an array?");
+        confirm("Do you want to reset an array?");
         localStorage.clear();
         console.log(localStorage.getItem('carNumbersParking1'));
     };
